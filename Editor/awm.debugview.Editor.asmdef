@@ -1,17 +1,16 @@
 {
-    "name": "OmiyaGames.Template.Tests",
+    "name": "awm.debugview.Editor",
     "references": [
-        "OmiyaGames.Template"
+        "awm.debugview"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
-    "optionalUnityReferences": [
-        "TestAssemblies"
-    ]
+    "versionDefines": []
 }

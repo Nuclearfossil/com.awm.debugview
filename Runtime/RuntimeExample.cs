@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace OmiyaGames.Template
+namespace awm.debugview.Player
 {
     ///-----------------------------------------------------------------------
     /// <remarks>

@@ -1,6 +1,8 @@
 {
-    "name": "OmiyaGames.Template",
-    "references": [],
+    "name": "awm.debugview.Tests",
+    "references": [
+        "awm.debugview"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
@@ -8,5 +10,8 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": []
+    "versionDefines": [],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ]
 }

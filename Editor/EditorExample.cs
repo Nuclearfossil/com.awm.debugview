@@ -1,9 +1,6 @@
-using UnityEngine;
 using UnityEditor;
-using UnityEditor.AnimatedValues;
-using System.Collections.Generic;
 
-namespace OmiyaGames.Template.Editor
+namespace awm.debugview.Editor
 {
     ///-----------------------------------------------------------------------
     /// <remarks>
@@ -60,7 +57,7 @@ namespace OmiyaGames.Template.Editor
     /// This is an example script for starting an editor inspector.
     /// </summary>
     /// <seealso cref="RuntimeExample"/>
-    [CustomEditor(typeof(RuntimeExample))]
+    [CustomEditor(typeof(awm.debugview.Player.RuntimeExample))]
     public class EditorExample : UnityEditor.Editor
     {
         /// <summary>

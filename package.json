@@ -1,23 +1,23 @@
 {
-  "name": "com.omiyagames.template",
-  "displayName": "Omiya Games - Template Unity Package",
+  "name": "com.awm.debugview",
+  "displayName": "Debug View",
   "version": "0.1.0-preview.1",
   "unity": "2019.3",
   "unityRelease": "7f1",
-  "description": "This is a template package, used as a basis to build a bigger one.",
+  "description": "This is intended to be a debug overlay (either render to texture or directly to the screen).",
   "category": "Tool",
   "type": "tool",
   "license": "MIT",
   "author": {
-    "name": "Taro Omiya",
-    "email": "support@omiyagames.com",
-    "url": "https://www.omiyagames.com"
+    "name": "Ash Matheson",
+    "email": "not@given.net",
+    "url": "https://unity3d.com"
   },
   "dependencies": {
     "com.unity.ext.nunit": "1.0.0"
   },
   "keywords": [
-    "Omiya Games",
+    "Debug View",
     "Scripts",
     "Template",
     "Tool"
