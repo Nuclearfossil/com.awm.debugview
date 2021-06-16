@@ -1,10 +1,11 @@
-using UnityEditor;
+using UnityEngine;
+using System.Collections.Generic;
 
-namespace awm.debugview.Editor
+namespace awm.debugview.Player
 {
     ///-----------------------------------------------------------------------
     /// <remarks>
-    /// <copyright file="EditorExample.cs" company="Omiya Games">
+    /// <copyright file="DebugView.cs" company="Unity Technologies">
     /// The MIT License (MIT)
     /// 
     /// Copyright (c) 2019-2020 Omiya Games
@@ -35,54 +36,44 @@ namespace awm.debugview.Editor
     /// <item>
     /// <term>
     /// <strong>Version:</strong> 1.0.0<br/>
-    /// <strong>Date:</strong> 12/31/2019<br/>
-    /// <strong>Author:</strong> Taro Omiya
+    /// <strong>Date:</strong> 06/15/21<br/>
+    /// <strong>Author:</strong> Ash Matheson
     /// </term>
     /// <description>Initial verison.</description>
-    /// </item>
-    /// <item>
-    /// <term>
-    /// <strong>Version:</strong> 1.3.0<br/>
-    /// <strong>Date:</strong> 5/7/2019<br/>
-    /// <strong>Author:</strong> Taro Omiya
-    /// </term>
-    /// <description>
-    /// Updated documentation to support DocFX.
-    /// </description>
     /// </item>
     /// </list>
     /// </remarks>
     ///-----------------------------------------------------------------------
     /// <summary>
-    /// This is an example script for starting an editor inspector.
+    /// This is an example script for starting a package.
     /// </summary>
-    /// <seealso cref="RuntimeExample"/>
-    [CustomEditor(typeof(awm.debugview.Player.RuntimeExample))]
-    public class EditorExample : UnityEditor.Editor
+    /// <seealso cref="Editor.EditorExample"/>
+    public class DebugView : MonoBehaviour
     {
         /// <summary>
-        /// An example of a member variable, used to display in the inspector.
+        /// An example of a member variable, visible on the inspector.
         /// </summary>
-        SerializedProperty exampleField;
+        [SerializeField]
+        [Tooltip("Should we use a render texture?")]
+        bool useRenderTexture = false;
+
+        [SerializeField]
+        [Tooltip("Texture to use")]
+        Texture2D renderTexture;
 
         /// <summary>
-        /// OnEnable is called on the frame when a script is displayed in the
-        /// inspector just before OnInspectorGUI is called the first time.
+        /// Start is called on the frame when a script is enabled just before
+        /// any of the Update methods is called the first time.
         /// </summary>
-        public void OnEnable()
+        void Start()
         {
-            exampleField = serializedObject.FindProperty("exampleField");
         }
 
         /// <summary>
-        /// OnInspectorGUI is called every frame, if this script is displayed
-        /// in the inspector.
+        /// Update is called every frame, if the MonoBehaviour is enabled.
         /// </summary>
-        public override void OnInspectorGUI()
+        void Update()
         {
-            serializedObject.Update();
-            EditorGUILayout.PropertyField(exampleField, true);
-            serializedObject.ApplyModifiedProperties();
         }
     }
 }
